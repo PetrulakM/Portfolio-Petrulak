@@ -1,0 +1,188 @@
+body {
+  overflow: hidden;
+}
+.obsah{
+    position: absolute;
+    top: 150px;
+    font-size: 35px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+.navbar{
+    background-color: rgb(52, 52, 52);
+    width: 100%;
+    border: 5px solid rgb(0, 0, 0);
+    padding: 20px;
+    margin: 0px;
+    top: 0;
+    position: fixed;
+    margin-left: -12px;
+    font-size: 25px;
+    display: none;
+}
+.Button{
+    height: 60px;
+    width: 125px;
+    border-color: rgb(0, 169, 0);
+    background-color: rgb(102, 203, 0);
+    border-radius: 15px;
+    margin-right: 100px;
+    font-size: 25px;
+    
+    
+}
+.Button:hover{
+  background-color: rgb(2, 124, 0);
+  border-color: rgb(10, 145, 0);
+  color: white;
+  transition-duration: 1s;
+}
+.box{
+  position: absolute;
+  height: 30px;
+  width: 30px;
+  border: 15px solid green;
+  padding: 0px;
+  margin: 0px;
+}
+.adam1{
+  width: 80px;
+  height: 100px;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%); /*! trasnform: translate způsobuje že se object vycentruje I ve svém vlastním modelu! */
+  z-index: 1; 
+}
+.obstacle{
+  position: fixed;
+  background-color: red;
+  z-index: 1;
+  pointer-events: none;
+}
+.path{
+  position: relative;
+  background-color: blueviolet;
+  z-index: 2;
+  pointer-events: none;
+  background-image: url(path.jpg);
+}
+.map{
+  width: 50000px;
+  height: 50000px;
+  position:  relative;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: block;
+  background-color: rgb(0, 195, 255);
+  background-image: url(default.png);
+  background-size: 100px;
+  z-index: -1;
+}
+.dev-layer{
+  z-index: -5;
+  width: 200px;
+  height: 500px;
+  background-color: blue;
+  display: none;
+  opacity: 95%;
+  color: azure;
+  padding: 15px;
+  font-size: 12px;
+  
+}
+.inventory{
+  position: absolute;
+  top: 2%;
+  left: 4%;
+  height: 90%;
+  width: 90%;
+  opacity: 97%;
+  background-color: gray;
+  display: none;
+  z-index: 5;
+  padding: 15px;
+  color: white;
+}
+.gate{
+  background-image: url(gate.png);
+  background-size: cover;
+  position: fixed;
+  z-index: 2;
+ 
+}
+.left{
+  transform: rotate(-90deg);
+}
+.right{
+  transform: rotate(90deg);
+}
+.upsideDown{
+  transform: rotate(180deg);
+}
+.fieldWall{
+  background-image: url(Heavy.png);
+  background-size: contain;
+}
+.caveWall{
+  background-image: url(heheheha.jpeg);
+  background-size: contain;
+}
+.entryWall{
+  background-image: url(pog.png);
+  background-size: contain;
+}
+.drawbridge{
+  background-color: rgb(95, 48, 20);
+  z-index: 3;
+  position: fixed;
+}
+.water{
+  background-color: rgb(0, 162, 255);
+  z-index: 2;
+  position: fixed;
+}
+.castleWall{
+  background-color: gray;
+  z-index: 2;
+  position: fixed;
+}
+.flowerBed{
+  background-color: yellow;
+  z-index: 2;
+  position: fixed;
+}
+.encounterArea{
+  background-color: rgb(243, 243, 79);
+  opacity: 0%;
+  z-index: 0;
+  position: absolute;
+  pointer-events: none;
+}
+.enemy{
+
+}
+.goblin{
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.yellow{
+  background-color: lime;
+  opacity: 10%;
+  position: fixed;
+  z-index: 1;
+}
+.caveFloor{
+  background-image: url(path.jpg);
+  z-index: 0;
+  position: fixed;
+  background-size: contain;
+}
+.castleFloor{
+  background-image: url(ground.jpg);
+  background-size: contain;
+  z-index: 2;
+  position: fixed;
+}

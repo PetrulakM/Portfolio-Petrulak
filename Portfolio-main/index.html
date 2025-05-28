@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=800, height=600, user-scalable=no">
+    <title>petrulak-portfolio</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="script.js">
+    <link rel="stylesheet" href="test.cs">
+</head>
+<body>
+    <div class="navbar">
+        <button type="button" class="Button">
+            Home
+        </button>
+        <button type="button" class="Button">
+            Contacts
+        </button>
+        <button type="button" class="Button">
+            Projects
+        </button>     
+    </div>
+
+<div class="dev-layer">
+    <h1>Dev console (press G to toggle)</h1>
+    <button onclick="teleport('up')">Down</button>
+    <button onclick="teleport('down')">Up</button>
+    <button onclick="teleport('left')">Right</button>
+    <button onclick="teleport('right')">Left</button>
+
+    <button onclick="teleport('bigup')">Big Down</button>
+    <button onclick="teleport('bigdown')">Big Up</button>
+    <button onclick="teleport('bigleft')">Big Right</button>
+    <button onclick="teleport('bigright')">Big Left</button>
+
+    <button onclick="hitbox('encounter')">Encounter zones</button>
+
+    <button onclick="spawn('spawn')">Teleport to spawn</button>
+
+</div>
+
+<div class="inventory">
+    <h1>Inventory</h1>
+</div>
+
+
+<img class="adam1" src="click.jpg" alt="">
+<div id="adam" class="map">
+    <img src="map.png" style="height: 50px; width: 50px;">
+    <!-- zvedání value top posunuje dolu,  zvedani left hybe doleva -->
+    <div class="flowerBed" id="spawn" style="height: 200px; width: 200px; left: 25400px; top: 25350px;">spawn</div>
+    <div class="obstacle entryWall" style="height: 1000px; width: 100px; left: 24100px; top: 25300px;">CaveA</div>  
+    <div class="obstacle entryWall" style="height: 100px; width: 2040px; left: 23700px; top: 24900px;">CaveB</div>
+    <div class="obstacle entryWall" style="height: 1700px; width: 100px; left: 23700px; top: 25000px;">CaveC</div>
+    <div class="obstacle entryWall" style="height: 100px; width: 1900px; left: 24100px; top: 26200px;">CaveD</div>
+    <div class="obstacle entryWall" style="height: 100px; width: 2300px; left: 23700px; top: 26600px;">CaveE</div>
+    <div class="obstacle entryWall" style="height: 1200px; width: 100px; left: 25650px; top: 21500px;">CaveF</div> 
+    <div class="obstacle entryWall" style="height: 1300px; width: 100px; left: 25700px; top: 24900px;">CaveG</div> 
+    <div class="obstacle entryWall" style="height: 100px; width: 700px; left: 25000px; top: 25650px;">CaveH</div>
+    <div class="obstacle entryWall" style="height: 700px; width: 100px; left: 24900px; top: 25300px;">CaveI</div>
+    <div class="yellow" style="height: 300px; width: 100px; left: 24900px; top: 25000px;">resize platforma</div>
+    <div class="caveFloor" style="height: 1700px; width: 2100px; left: 23700px; top: 24900px;">CaveFloor</div>
+
+    <div class="gate right" style="height: 200px; width: 400px; top: 26350px; left: 25700px;">CaveGateA</div>
+    <div class="obstacle caveWall" style="height: 100px; width: 400px; left: 26000px; top: 26600px;">CaveA</div>
+    <div class="obstacle caveWall" style="height: 100px; width: 400px; left: 26000px; top: 26200px;">GateB</div>
+    <div class="gate left" style="height: 200px; width: 400px; top: 26350px; left: 26300px;">CaveGateB</div>
+
+    <div class="obstacle fieldWall" style="height: 100px; width: 1700px; left: 26400px; top: 26600px;">FieldA</div>
+    <div class="obstacle fieldWall" style="height: 100px; width: 2100px; left: 26400px; top: 26200px;">FieldB</div>
+    <div class="obstacle fieldWall" style="height: 2000px; width: 100px; left: 28500px; top: 26200px;">FieldC</div>
+    <div class="obstacle fieldWall" style="height: 1200px; width: 100px; left: 28100px; top: 26600px;">FieldD</div>
+    <div class="obstacle fieldWall" style="height: 100px; width: 600px; left: 27600px; top: 27800px;">FieldE</div>
+    <div class="obstacle fieldWall" style="height: 100px; width: 2600px; left: 25100px; top: 27200px;">FieldF</div>
+    <div class="obstacle fieldWall" style="height: 700px; width: 100px; left: 27600px; top: 27200px;">FieldG</div>
+    <div class="obstacle fieldWall" style="height: 100px; width: 900px; left: 27600px; top: 28200px;">FieldH</div>
+    <div class="obstacle fieldWall" style="height: 700px; width: 100px; left: 27600px; top: 28200px;">FieldI</div>
+    <div class="obstacle fieldWall" style="height: 100px; width: 1000px; left: 26700px; top: 28900px;">FieldJ</div>
+    <div class="obstacle fieldWall" style="height: 2000px; width: 100px; left: 26700px; top: 28900px;">FieldK</div>
+    <div class="obstacle fieldWall" style="height: 5400px; width: 100px; left: 25100px; top: 27200px;">FieldL</div>
+    <div class="obstacle fieldWall" style="height: 100px; width: 1000px; left: 26700px; top: 30900px;">FieldM</div>
+    <div class="obstacle fieldWall" style="height: 700px; width: 100px; left: 27600px; top: 30900px;">FieldN</div>
+    <div class="obstacle fieldWall" style="height: 700px; width: 100px; left: 27600px; top: 31900px;">FieldO</div>
+    <div class="obstacle fieldWall" style="height: 100px; width: 2600px; left: 25100px; top: 32500px;">FieldP</div>
+    <div class="obstacle fieldWall" style="height: 100px; width: 600px; left: 27600px; top: 31900px;">FieldQ</div>
+    <div class="obstacle fieldWall" style="height: 100px; width: 1000px; left: 27600px; top: 31500px;">FieldR</div>
+    <div class="obstacle fieldWall" style="height: 1000px; width: 100px; left: 28200px; top: 31900px;">FieldS</div>
+    <div class="obstacle fieldWall" style="height: 1400px; width: 100px; left: 28600px; top: 31500px;">FieldT</div>
+    <div class="encounterArea" style="height: 5400px; width: 2500px; left: 25100px; top: 27200px;">FieldEncounterArea</div>
+
+
+    <div class="gate" style="height: 200px; width: 400px; top: 32800px; left: 28250px;">CaveGateA</div>
+    <div class="obstacle caveWall" style="height: 400px; width: 100px; left: 28200px; top: 32500px;">CaveA</div>
+    <div class="obstacle caveWall" style="height: 400px; width: 100px; left: 28600px; top: 32500px;">GateB</div>
+    <div class="gate upsideDown" style="height: 200px; width: 400px; top: 32400px; left: 28250px;">CaveGateB</div>
+
+    <div class="obstacle fieldWall" style="height: 100px; width: 600px; left: 28600px; top: 32900px;">ForestA</div>
+    <div class="obstacle fieldWall" style="height: 100px; width: 3200px; left: 25100px; top: 32900px;">ForestB</div>
+    <div class="obstacle fieldWall" style="height: 2800px; width: 100px; left: 25100px; top: 32900px;">ForestC</div>
+    <div class="obstacle fieldWall" style="height: 1200px; width: 100px; left: 29200px; top: 32900px;">ForestD</div>
+    <div class="obstacle fieldWall" style="height: 100px; width: 2700px; left: 26600px; top: 34000px;">ForestE</div>
+    <div class="obstacle fieldWall" style="height: 1600px; width: 100px; left: 26600px; top: 34000px;">ForestF</div>
+    
+    <div class="encounterArea" style="height: 2800px; width: 4000px; left: 25100px; top: 32900px;">ForestEncounterArea</div>
+
+    <div class="obstacle water" style="height: 500px; width: 500px; left: 25200px; top: 35100px;">WaterA</div>
+    <div class="drawbridge" style="height: 600px; width: 400px; left: 25700px; top: 35100px;">Drawbridge</div>  
+    <div class="obstacle water" style="height: 500px; width: 500px; left: 26100px; top: 35100px;">WaterB</div>
+   
+    <div class="castleWall" style="height: 100px; width: 4200px; left: 24100px; top: 35600px;">Castle0</div>
+    <div class="castleWall" style="height: 100px; width: 4200px; left: 24100px; top: 36000px;">CastleA</div>
+    <div class="obstacle castleWall" style="height: 500px; width: 100px; left: 25600px; top: 35600px;">CastleB</div>
+    <div class="obstacle castleWall" style="height: 500px; width: 100px; left: 26100px; top: 35600px;">CastleC</div>
+    <div class="obstacle castleWall" style="height: 1100px; width: 100px; left: 25200px; top: 36100px;">CastleD</div>    
+    <div class="obstacle castleWall" style="height: 100px; width: 400px; left: 25200px; top: 36000px;">CastleE</div>     
+    <div class="obstacle castleWall" style="height: 100px; width: 2700px; left: 25200px; top: 37100px;">CastleF</div>    
+    <div class="obstacle castleWall" style="height: 100px; width: 1700px; left: 26100px; top: 36000px;">CastleG</div> 
+
+
+    <div class="castleFloor" style="height: 600px; width: 400px; left: 25700px; top: 35700px;">CastleFloorA</div> 
+
+
+</div>
+<script src="movement.js"></script>
+<script src="debug.js"></script>
+<script src="menus.js"></script>
+<script src="encounter.js"></script>
+</body>
+</html>
